@@ -97,7 +97,7 @@ int main(){
                 cout<<endl<<quant<<" Pasta alloted to you :)"<<endl;
             }
             else{
-                cout<<endl<<Qpasta-Spasta<<" are rooms available only :|"<<endl;
+                cout<<endl<<Qpasta-Spasta<<" are pasta available only :|"<<endl;
             }
             break;
 
