@@ -60,76 +60,76 @@ long long opnmbr = 1;
  
 using namespace std;
 
-// bool isprime(int a)
-// {
-//     if (a <= 1)
-//         return false;
-//     if (a <= 3)
-//         return true;
+bool isprime(int a)
+{
+    if (a <= 1)
+        return false;
+    if (a <= 3)
+        return true;
 
-//     if (a % 2 == 0)
-//         return false;
-//     if(a%3==0)
-//     return false;
-//     for (int i = 5; i * i <=a; i += 6)
-//     {
-//         if (a % i == 0 || a % (i + 2) == 0)
-//             return false;
-//     }
-//     return true;
-// }
-// vector<int> factor(int n)
-// {
-//     vector<int> f;
-//     if (n <= 1)
-//         cout << "0" << endl;
-//     while (n % 2 == 0)
-//     {
-//         n = n / 2;
-//         f.push_back(2);
-//     }
-//     while (n % 3 == 0)
-//     {
-//         n = n / 3;
-//         f.push_back(3);
-//     }
-//     //cout<<f<<endl;
-//     for (int i = 5; i*i <= n; i += 6)//yha tk n 5 ho jata to fir 1 bhi 5 thi to sq 25 hota na condition chlti he nhi
-//     {
-//         if (isprime(i) == true)
-//         {
-//             while (n % i == 0)
-//             {
-//                 n = n / i;
-//                 f.push_back(i);
-//             }
-//         }
-//         else if (isprime(i+2) == true)
-//         {
-//             while (n % (i+2) == 0)
-//             {
-//                 n = n / (i+2);
-//                 f.push_back(i+2);
-//             }
-//         }
-//         else continue;
-//     }
-//     return f;
-// } 
-// void krdiyasuru()
-// {
-//     cii(x,y);
-//     vector<int> v = factor(y);
-//     bool flag = true;
-//     for(auto i : v){
-//         if(x%v[i] != 0){
-//             flag = false;
-//             break;
-//         }
-//     }
-//     if(flag == true) cout<< " Yes" <<endl;
-//     else cout<< " No" <<endl;  
-// }
+    if (a % 2 == 0)
+        return false;
+    if(a%3==0)
+    return false;
+    for (int i = 5; i * i <=a; i += 6)
+    {
+        if (a % i == 0 || a % (i + 2) == 0)
+            return false;
+    }
+    return true;
+}
+vector<int> factor(int n)
+{
+    vector<int> f;
+    if (n <= 1)
+        cout << "0" << endl;
+    while (n % 2 == 0)
+    {
+        n = n / 2;
+        f.push_back(2);
+    }
+    while (n % 3 == 0)
+    {
+        n = n / 3;
+        f.push_back(3);
+    }
+    //cout<<f<<endl;
+    for (int i = 5; i*i <= n; i += 6)//yha tk n 5 ho jata to fir 1 bhi 5 thi to sq 25 hota na condition chlti he nhi
+    {
+        if (isprime(i) == true)
+        {
+            while (n % i == 0)
+            {
+                n = n / i;
+                f.push_back(i);
+            }
+        }
+        else if (isprime(i+2) == true)
+        {
+            while (n % (i+2) == 0)
+            {
+                n = n / (i+2);
+                f.push_back(i+2);
+            }
+        }
+        else continue;
+    }
+    return f;
+} 
+void krdiyasuru()
+{
+    cii(x,y);
+    vector<int> v = factor(y);
+    bool flag = true;
+    for(auto i : v){
+        if(x%v[i] != 0){
+            flag = false;
+            break;
+        }
+    }
+    if(flag == true) cout<< " Yes" <<endl;
+    else cout<< " No" <<endl;  
+}
 
 int main()
 {
